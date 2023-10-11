@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema  xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="GQOKMW_kurzusfelvetel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="hallgato">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="hnev" type="xs:string" />
+              <xs:element name="szulnev" type="xs:string" />
+              <xs:element name="szak">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="evf"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="kurzusok" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="kurzus" minOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="kurzusnev" type="xs:string" />
+                    <xs:element name="kredit" type="xs:unsignedInt" />
+                    <xs:element name="hely" type="xs:string" />
+                    <xs:element name="idopont" type="xs:string" />
+                    <xs:element name="oktato" type="xs:string" />
+                    <xs:element  name="oraado" type="xs:string" />
+                  </xs:sequence>
+                  <xs:attribute name="id" type="xs:string" use="required" />
+                  <xs:attribute name="jovahagyas" type="xs:string" use="optional" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="tanev" type="xs:unsignedInt" use="required" />
+      <xs:attribute name="egyetem" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
