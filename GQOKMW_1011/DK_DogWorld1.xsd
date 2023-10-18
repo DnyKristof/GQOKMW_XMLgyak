@@ -4,13 +4,11 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 
 <xs:element name="cim" type="xs:string"/>
-<xs:element name="konyv" type="xs:string"/>
 <xs:element name="baratja" type="xs:string" />
 <xs:element name="szerzo" type="xs:string" />
-<xs:element  name="szereplo" type="xs:string"/>
 <xs:element  name="született" type="xs:date"/>
 <xs:element  name="jellemzes" type="xs:string"/>
-<xs:element  name="isbn" type="xs:string"/>
+
 
 
 
@@ -23,15 +21,15 @@
         <xs:element name="konyv" minOccurs="0" maxOccurs="unbounded">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="cim"  minOccurs="0" maxOccurs="1"/>
-              <xs:element name="szerzo" type="xs:string" />
+              <xs:element ref="cim"  minOccurs="0" maxOccurs="1"/>
+              <xs:element ref="szerzo" />
               <xs:element maxOccurs="20" name="szereplo" minOccurs="0">
                 <xs:complexType>
                   <xs:sequence>
                     <xs:element name="nev"  />
-                    <xs:element minOccurs="0" name="baratja"  />
-                    <xs:element name="szuletett"  />
-                    <xs:element name="jellemzes" />
+                    <xs:element minOccurs="0" ref="baratja"  />
+                    <xs:element ref="született"  />
+                    <xs:element ref="jellemzes" />
                   </xs:sequence>
                 </xs:complexType>
               </xs:element>
