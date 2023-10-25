@@ -30,13 +30,15 @@ public class XSDValidation {
 			Schema schema = factory.newSchema(new File(xsdPath));
 			Validator validator = schema.newValidator();
 			validator.validate(new StreamSource(new File(xmlPath)));
-		} catch (IOException e) {
-			System.out.println("Exception: " + e.getMessage());
+		} catch (IOException e | SAXException s) {
+			if(e != null){
+				System.out.println(e.printStackTrace)
+			}
+			else{
+				System.out.println(s.printStackTrace)
+			}
 			return false;
-		} catch (SAXException e1) {
-			System.out.println("SAX Exception: " + e1.getMessage());
-			return false;
-		}
+		} 
 
 		return true;
 
