@@ -1,0 +1,25 @@
+<GQOKMWclasschedule>
+    <subject id="01" type = "Lecture">
+        <subjectname>
+            Webtechnology
+        </subjectname>
+        <time>
+            <start>
+                10:00
+            </start>
+            <end>
+                12:00
+            </end>
+            <day>
+                Monday
+            </day>
+        </time>
+        <teacher>
+            Agárdi Anita
+        </teacher>
+        <place>
+            XXX A1 III. 305
+        </place>
+    </subject>
+
+</GQOKMWclasschedule>
