@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Nev" type="xs:string"/>
+    <xs:element name="Hatarido" type="xs:date"/>
+    <xs:element name="Utca" type="xs:string"/>
+    <xs:element name="Varos" type="xs:string"/>
+    <xs:element name="Hazszam" type="xs:string"/>
+    <xs:element name="Megrendelesideje" type="xs:date"/>
+    <xs:element name="Statusz" type="xs:string"/>
+    <xs:element name="Learazas" type="xs:float"/>
+    <xs:element name="Mennyiség" type="xs:positiveInteger"/>
+    <xs:element name="Listaar" type="xs:int"/>
+    <xs:element name="Fizetes" type="xs:positiveInteger"/>
+
+    <xs:complexType name="cimType">
+        <xs:sequence>
+            <xs:element ref="Utca"/>
+            <xs:element ref="Varos"/>
+            <xs:element ref="Hazszam"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="telefonszamType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{4}-\d{7}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="Vasarlo">
+        <xs:sequence>
+            <xs:element ref="Nev"/>
+            <xs:element type="cimType" name="Cim"/>
+            <xs:element type="telefonszamType" name="Telefonszam" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="V_id" type="xs:positiveInteger" use="required"/>
+        <xs:attribute name="M_id" type="xs:positiveInteger" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="Megrendeles">
+        <xs:sequence>
+            <xs:element ref="Hatarido"/>
+            <xs:element ref="Megrendelesideje"/>
+            <xs:element ref="Statusz"/>
+        </xs:sequence>
+        <xs:attribute name="M_id" type="xs:positiveInteger" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="Megrendelttermék">
+        <xs:sequence>
+            <xs:element ref="Learazas"/>
+            <xs:element ref="Mennyiség"/>
+            <xs:element ref="Listaar"/>
+        </xs:sequence>
+        <xs:attribute name="M_id" type="xs:positiveInteger" use="required"/>
+        <xs:attribute name="MT_id" type="xs:positiveInteger" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="Üzlet">
+        <xs:sequence>
+            <xs:element type="cimType" name="Cim"/>
+            <xs:element ref="Nev"/>
+            <xs:element type="telefonszamType" name="Telefonszam" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="Ü_id" type="xs:positiveInteger" use="required"/>
+        <xs:attribute name="MT_id" type="xs:positiveInteger" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="Ü_D">
+        <xs:sequence>
+            <xs:element ref="Fizetes"/>
+        </xs:sequence>
+        <xs:attribute name="Ü_id" type="xs:positiveInteger" use="required"/>
+        <xs:attribute name="D_id" type="xs:positiveInteger" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="Dolgozo">
+        <xs:sequence>
+            <xs:element type="cimType" name="Cim"/>
+            <xs:element ref="Nev"/>
+            <xs:element type="telefonszamType" name="Telefonszam" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="D_id" type="xs:positiveInteger" use="required"/>
+    </xs:complexType>
+
+    <xs:element name="GQOKMW_BEADANDO">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element type="Vasarlo" name="Vasarlo" maxOccurs="unbounded"/>
+                <xs:element type="Megrendeles" name="Megrendeles" maxOccurs="unbounded"/>
+                <xs:element type="Megrendelttermék" name="Megrendelttermék" maxOccurs="unbounded"/>
+                <xs:element type="Üzlet" name="Üzlet" maxOccurs="unbounded"/>
+                <xs:element type="Ü_D" name="Ü_D" maxOccurs="unbounded"/>
+                <xs:element type="Dolgozo" name="Dolgozo" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+        
+        <!-- Egyedi kulcsok -->
+        <xs:key name="Vasarlo_V_id">
+            <xs:selector xpath="Vasarlo"/>
+            <xs:field xpath="@V_id"/>
+        </xs:key>
+        <xs:key name="Megrendeles_M_id">
+            <xs:selector xpath="Megrendeles"/>
+            <xs:field xpath="@M_id"/>
+        </xs:key>
+        <xs:key name="Megrendelttermék_MT_id">
+            <xs:selector xpath="Megrendelttermék"/>
+            <xs:field xpath="@MT_id"/>
+        </xs:key>
+        <xs:key name="Üzlet_Ü_id">
+            <xs:selector xpath="Üzlet"/>
+            <xs:field xpath="@Ü_id"/>
+        </xs:key>
+        <xs:key name="Dolgozok_D_id">
+            <xs:selector xpath="Dolgozo"/>
+            <xs:field xpath="@D_id"/>
+        </xs:key>
+
+        <!-- Idegen kulcsok -->
+        <xs:keyref name="Vasarlo_Megrendeles_id_ref" refer="Megrendeles_M_id">
+            <xs:selector xpath="Vasarlo"/>
+            <xs:field xpath="@M_id"/>
+        </xs:keyref>
+        <xs:keyref name="Megrendelttermék_Megrendeles_id_ref" refer="Megrendeles_M_id">
+            <xs:selector xpath="Megrendelttermék"/>
+            <xs:field xpath="@M_id"/>
+        </xs:keyref>
+        <xs:keyref name="Üzlet_Megrendelttermék_id_ref" refer="Megrendelttermék_MT_id">
+            <xs:selector xpath="Üzlet"/>
+            <xs:field xpath="@MT_id"/>
+        </xs:keyref>
+        <xs:keyref name="Ü_D_Üzlet_id_ref" refer="Üzlet_Ü_id">
+            <xs:selector xpath="Ü_D"/>
+            <xs:field xpath="@Ü_id"/>
+        </xs:keyref>
+        <xs:keyref name="Ü_D_Dolgozo_id_ref" refer="Dolgozok_D_id">
+            <xs:selector xpath="Ü_D"/>
+            <xs:field xpath="@D_id"/>
+        </xs:keyref>
+
+        <!-- Egy-egy kapcsolat -->
+        <xs:unique name="Megrendeles_M_id_unique">
+            <xs:selector xpath="Vasarlo"/>
+            <xs:field xpath="@M_id"/>
+        </xs:unique>
+
+
+    </xs:element>
+
+
+</xs:schema>
