@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GQOKMW_BEADANDO xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="XMLSchemaGQOKMW.xsd">
+<GQOKMW_BEADANDO xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+    xs:noNamespaceSchemaLocation="XMLSchemaGQOKMW.xsd">
+
     <!-- Vásárlók -->
     <Vasarlo V_id="1" M_id="01">
         <Nev>Ádám</Nev>
@@ -91,7 +93,7 @@
             <Varos>Miskolc</Varos>
             <Hazszam>6</Hazszam>
         </Cim>
-        <Nev>Hervis</Nev>
+        <Nev>Intersport</Nev>
         <Telefonszam>0670-5312490</Telefonszam>
         <Telefonszam>0630-6587421</Telefonszam>
     </Üzlet>
@@ -102,7 +104,7 @@
             <Varos>Miskolc</Varos>
             <Hazszam>6</Hazszam>
         </Cim>
-        <Nev>Hervis</Nev>
+        <Nev>Dechatlon</Nev>
         <Telefonszam>0670-5312490</Telefonszam>
         <Telefonszam>0630-6587421</Telefonszam>
     </Üzlet>
