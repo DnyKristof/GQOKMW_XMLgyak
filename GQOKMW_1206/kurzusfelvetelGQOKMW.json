@@ -1,0 +1,57 @@
+{
+  "GQOKMW_kurzusfelvetel": {
+    "hallgato": {
+      "hnev": "Danyi Kristóf Milán",
+      "szulnev": "Danyi Kristóf Milán",
+      "szak": "Mérnökinformatika"
+    },
+    "kurzusok": {
+      "kurzus": [
+        {
+          "kurzusnev": "Mesterséges Intelligencia Alapjai",
+          "kredit": 5,
+          "hely": "I. Előadó",
+          "idopont": "Kedd 10:00-12:00",
+          "oktato": "Kunné Judit",
+          "oraado": "Fazekas Levente"
+        },
+        {
+          "kurzusnev": "Vezetés-szervezés",
+          "kredit": 2,
+          "hely": "Ismeretlen",
+          "idopont": "Ismeretlen",
+          "oktato": "Kucsma Daniella"
+        },
+        {
+          "kurzusnev": "Német nyelv I.",
+          "kredit": 2,
+          "hely": "A1 202",
+          "idopont": "Csütörtök 12:00-:14:00",
+          "oktato": "Kucsma Daniella"
+        },
+        {
+          "kurzusnev": "Idegen nyelv felmentett",
+          "kredit": 0,
+          "hely": "",
+          "idopont": "",
+          "oktato": ""
+        },
+        {
+          "kurzusnev": "Webalkalmazások (C#)",
+          "kredit": 5,
+          "hely": "Inf 101",
+          "idopont": "Csütörtök 14:00-18:00",
+          "oktato": "Árvai László Lajos",
+          "oraado": "Mileff Péter"
+        },
+        {
+          "kurzusnev": "Adatkezelés XML-ben",
+          "kredit": 5,
+          "hely": "Inf 101",
+          "idopont": "Szerda 10:00-12:00",
+          "oktato": "Bednarik László"
+        }
+      ]
+    }
+  }
+}

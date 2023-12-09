@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<class xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="studentGQOKMW.xsd">
+    <student student_id="01">
+        <keresztnev>Máté</keresztnev>
+        <vezeteknev>Nagy</vezeteknev>
+        <becenev>MN</becenev>
+        <kor>24</kor>
+    </student>
+
+    <student student_id="02">
+        <keresztnev>Balázs</keresztnev>
+        <vezeteknev>Juhász</vezeteknev>
+        <becenev>BJ</becenev>
+        <kor>21</kor>
+    </student>
+
+    <student student_id="03">
+        <keresztnev>Vanda</keresztnev>
+        <vezeteknev>Holczer</vezeteknev>
+        <becenev>VH</becenev>
+        <kor>21</kor>
+    </student>
+
+     <student student_id="04">
+        <keresztnev>László</keresztnev>
+        <vezeteknev>Stremler</vezeteknev>
+        <becenev>LS</becenev>
+        <kor>22</kor>
+    </student>
+
+    <student student_id="05">
+        <keresztnev>Pista</keresztnev>
+        <vezeteknev>Kiss</vezeteknev>
+        <becenev>PK</becenev>
+        <kor>20</kor>
+    </student>
+</class>

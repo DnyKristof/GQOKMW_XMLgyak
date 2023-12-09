@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GQOKMW_kurzusfelvetel tanev="3" egyetem="ME">
+    <hallgato>
+        <hnev>Danyi Kristóf Milán</hnev>
+        <szulnev>Danyi Kristóf Milán</szulnev>
+        <szak evf="3">Mérnökinformatika</szak>
+    </hallgato>
+    <kurzusok>
+        <kurzus id="GEIAK130-B">
+            <kurzusnev>Mesterséges Intelligencia Alapjai</kurzusnev>
+            <kredit>5</kredit>
+            <hely>I. Előadó</hely>
+            <idopont>Kedd 10:00-12:00</idopont>
+            <oktato>Kunné Judit</oktato>
+            <oraado>Fazekas Levente</oraado>
+        </kurzus>
+        <kurzus id="MEIOKSZVNE21">
+            <kurzusnev>Német nyelv I.</kurzusnev>
+            <kredit>4</kredit>
+            <hely>A1 203</hely>
+            <idopont>Szerda 12:00-:14:00</idopont>
+            <oktato>Kucsma Daniella</oktato>
+        </kurzus>
+        <kurzus id="MIGEBIDFM1" jovahagyas="igen">
+            <kurzusnev>Idegen nyelv felmentett</kurzusnev>
+            <kredit>0</kredit>
+            <hely></hely>
+            <idopont></idopont>
+            <oktato></oktato>
+        </kurzus>
+        <kurzus id="GEIAL336-B">
+            <kurzusnev>Webalkalmazások (C#)</kurzusnev>
+            <kredit>5</kredit>
+            <hely>Inf 101</hely>
+            <idopont>Csütörtök 14:00-18:00</idopont>
+            <oktato>Árvai László Lajos</oktato>
+            <oraado>Mileff Péter</oraado>
+        </kurzus>
+        <kurzus id="GEIAL332-B">
+            <kurzusnev>Adatkezelés XML-ben</kurzusnev>
+            <kredit>5</kredit>
+            <hely>Inf 101</hely>
+            <idopont>Szerda 10:00-12:00</idopont>
+            <oktato>Bednarik László</oktato>
+        </kurzus>
+<kurzus id="GBAKOKSZVNE21">
+<kurzusnev>Kurzus</kurzusnev>
+<kredit>4</kredit>
+<hely>34. előadó</hely>
+<idopont>Hétfő 10:00-13:00</idopont>
+<oktato>Miszter Tamás</oktato>
+</kurzus>
+    </kurzusok>
+</GQOKMW_kurzusfelvetel>

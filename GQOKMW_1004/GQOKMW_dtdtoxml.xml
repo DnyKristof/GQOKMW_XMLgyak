@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE GQOKMW_model SYSTEM "GQOKMW_ertodtd.dtd">
+
+<GQOKMW_model>
+    <A a="a123">
+        <b>
+            <x>x elem</x>
+            <y>y elem</y>
+        </b>
+        <c>
+            <d>d elem</d>
+            <e>e elem</e>
+        </c>
+    </A>
+    <AB aid="a123" bid="b456">
+        <cAB>cAB adat</cAB>
+    </AB>
+    <B a="b456">
+        <b>
+            <x>
+                x elem
+            </x>
+            <y>
+                y elem
+            </y>
+        </b>
+    </B>
+    <BC bid="b456" cid="c789"/>
+    <C a="c789">
+        <bC>Data for bC</bC>
+    </C>
+</GQOKMW_model>

@@ -1,0 +1,11 @@
+<!ELEMENT GQOKMWclasschedule (subject*)>
+<!ELEMENT subject (subjectname,time,teacher,place*)>
+<!ELEMENT subjectname (#PCDATA)>
+<!ELEMENT place (#PCDATA)>
+<!ELEMENT teacher (#PCDATA)>
+<!ELEMENT time (start, end, day)>
+<!ELEMENT start (#PCDATA)>
+<!ELEMENT end (#PCDATA)>
+<!ELEMENT day (#PCDATA)>
+<!ATTLIST subject id ID #REQUIRED
+                type (Lecture|Seminar) "Lecture">
