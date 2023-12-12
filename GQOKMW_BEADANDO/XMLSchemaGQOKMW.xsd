@@ -8,7 +8,7 @@
     <xs:element name="Megrendelesideje" type="xs:date"/>
     <xs:element name="Statusz" type="xs:string"/>
     <xs:element name="Learazas" type="xs:float"/>
-    <xs:element name="Mennyiség" type="xs:positiveInteger"/>
+    <xs:element name="Mennyiseg" type="xs:positiveInteger"/>
     <xs:element name="Listaar" type="xs:int"/>
     <xs:element name="Fizetes" type="xs:positiveInteger"/>
 
@@ -45,10 +45,10 @@
         <xs:attribute name="M_id" type="xs:positiveInteger" use="required"/>
     </xs:complexType>
 
-    <xs:complexType name="Megrendelttermék">
+    <xs:complexType name="Megrendelttermek">
         <xs:sequence>
             <xs:element ref="Learazas"/>
-            <xs:element ref="Mennyiség"/>
+            <xs:element ref="Mennyiseg"/>
             <xs:element ref="Listaar"/>
         </xs:sequence>
         <xs:attribute name="M_id" type="xs:positiveInteger" use="required"/>
@@ -87,7 +87,7 @@
             <xs:sequence>
                 <xs:element type="Vasarlo" name="Vasarlo" maxOccurs="unbounded"/>
                 <xs:element type="Megrendeles" name="Megrendeles" maxOccurs="unbounded"/>
-                <xs:element type="Megrendelttermék" name="Megrendelttermék" maxOccurs="unbounded"/>
+                <xs:element type="Megrendelttermek" name="Megrendelttermek" maxOccurs="unbounded"/>
                 <xs:element type="Üzlet" name="Üzlet" maxOccurs="unbounded"/>
                 <xs:element type="Ü_D" name="Ü_D" maxOccurs="unbounded"/>
                 <xs:element type="Dolgozo" name="Dolgozo" maxOccurs="unbounded"/>
@@ -103,8 +103,8 @@
             <xs:selector xpath="Megrendeles"/>
             <xs:field xpath="@M_id"/>
         </xs:key>
-        <xs:key name="Megrendelttermék_MT_id">
-            <xs:selector xpath="Megrendelttermék"/>
+        <xs:key name="Megrendelttermek_MT_id">
+            <xs:selector xpath="Megrendelttermek"/>
             <xs:field xpath="@MT_id"/>
         </xs:key>
         <xs:key name="Üzlet_Ü_id">
@@ -121,11 +121,11 @@
             <xs:selector xpath="Vasarlo"/>
             <xs:field xpath="@M_id"/>
         </xs:keyref>
-        <xs:keyref name="Megrendelttermék_Megrendeles_id_ref" refer="Megrendeles_M_id">
-            <xs:selector xpath="Megrendelttermék"/>
+        <xs:keyref name="Megrendelttermek_Megrendeles_id_ref" refer="Megrendeles_M_id">
+            <xs:selector xpath="Megrendelttermek"/>
             <xs:field xpath="@M_id"/>
         </xs:keyref>
-        <xs:keyref name="Üzlet_Megrendelttermék_id_ref" refer="Megrendelttermék_MT_id">
+        <xs:keyref name="Üzlet_Megrendelttermek_id_ref" refer="Megrendelttermek_MT_id">
             <xs:selector xpath="Üzlet"/>
             <xs:field xpath="@MT_id"/>
         </xs:keyref>
