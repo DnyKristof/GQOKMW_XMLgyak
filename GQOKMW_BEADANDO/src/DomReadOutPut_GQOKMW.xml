@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GQOKMW_BEADANDO xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="XMLSchemaGQOKMW.xsd"> 
+<VasarloM_id="01" V_id="1">
+  <Nev>Kiss Ádám</Nev>
+  <Cim>
+    <Utca>Kossuth Lajos utca</Utca>
+    <Varos>Miskolc</Varos>
+    <Hazszam>1</Hazszam>
+  </Cim>
+  <Telefonszam>0630-1234567</Telefonszam>
+</Vasarlo>
+
+<VasarloM_id="02" V_id="2">
+  <Nev>Nagy Pista</Nev>
+  <Cim>
+    <Utca>Árpád utca</Utca>
+    <Varos>Szekszárd</Varos>
+    <Hazszam>5</Hazszam>
+  </Cim>
+  <Telefonszam>0630-3214569</Telefonszam>
+</Vasarlo>
+
+<VasarloM_id="03" V_id="3">
+  <Nev>Nagy Máté</Nev>
+  <Cim>
+    <Utca>József Attila út</Utca>
+    <Varos>Esztergom</Varos>
+    <Hazszam>5</Hazszam>
+  </Cim>
+  <Telefonszam>0630-1234765</Telefonszam>
+  <Telefonszam>0630-7654321</Telefonszam>
+</Vasarlo>
+
+
+<MegrendelesM_id="01">
+  <Hatarido>2021-02-03</Hatarido>
+  <Megrendelesideje>2021-02-01</Megrendelesideje>
+  <Statusz>Teljesítve</Statusz>
+</Megrendeles>
+
+<MegrendelesM_id="02">
+  <Hatarido>2021-02-07</Hatarido>
+  <Megrendelesideje>2021-02-02</Megrendelesideje>
+  <Statusz>Szállítás alatt</Statusz>
+</Megrendeles>
+
+<MegrendelesM_id="03">
+  <Hatarido>2021-03-05</Hatarido>
+  <Megrendelesideje>2021-03-01</Megrendelesideje>
+  <Statusz>Teljesítve</Statusz>
+</Megrendeles>
+
+
+<MegrendelttermekMT_id="11" M_id="01">
+  <Learazas>0.2</Learazas>
+  <Mennyiseg>2</Mennyiseg>
+  <Listaar>25000</Listaar>
+</Megrendelttermek>
+
+<MegrendelttermekMT_id="12" M_id="02">
+  <Learazas>0.2</Learazas>
+  <Mennyiseg>2</Mennyiseg>
+  <Listaar>25000</Listaar>
+</Megrendelttermek>
+
+<MegrendelttermekMT_id="13" M_id="03">
+  <Learazas>0.2</Learazas>
+  <Mennyiseg>2</Mennyiseg>
+  <Listaar>25000</Listaar>
+</Megrendelttermek>
+
+
+<ÜzletMT_id="11" Ü_id="21">
+  <Cim>
+    <Utca>Lajos utca</Utca>
+    <Varos>Miskolc</Varos>
+    <Hazszam>6</Hazszam>
+  </Cim>
+  <Nev>Hervis</Nev>
+  <Telefonszam>0670-5312490</Telefonszam>
+  <Telefonszam>0630-6587421</Telefonszam>
+</Üzlet>
+
+<ÜzletMT_id="12" Ü_id="22">
+  <Cim>
+    <Utca>Lajos utca</Utca>
+    <Varos>Miskolc</Varos>
+    <Hazszam>6</Hazszam>
+  </Cim>
+  <Nev>Intersport</Nev>
+  <Telefonszam>0670-5312490</Telefonszam>
+  <Telefonszam>0630-6587421</Telefonszam>
+</Üzlet>
+
+<ÜzletMT_id="13" Ü_id="23">
+  <Cim>
+    <Utca>Lajos utca</Utca>
+    <Varos>Miskolc</Varos>
+    <Hazszam>6</Hazszam>
+  </Cim>
+  <Nev>Dechatlon</Nev>
+  <Telefonszam>0670-5312490</Telefonszam>
+  <Telefonszam>0630-6587421</Telefonszam>
+</Üzlet>
+
+
+<Ü_DD_id="31" Ü_id="21">
+  <Fizetes>420000</Fizetes>
+</Ü_D>
+
+<Ü_DD_id="32" Ü_id="22">
+  <Fizetes>530000</Fizetes>
+</Ü_D>
+
+<Ü_DD_id="33" Ü_id="23">
+  <Fizetes>370000</Fizetes>
+</Ü_D>
+
+
+<DolgozoD_id="31">
+  <Cim>
+    <Utca>Oláh Lajos</Utca>
+    <Varos>Miskolc</Varos>
+    <Hazszam>6</Hazszam>
+  </Cim>
+  <Nev>Nagy Gergő</Nev>
+  <Telefonszam>0670-5342490</Telefonszam>
+  <Telefonszam>0630-6596521</Telefonszam>
+</Dolgozo>
+
+<DolgozoD_id="32">
+  <Cim>
+    <Utca>Deaák ferenc</Utca>
+    <Varos>Arnót</Varos>
+    <Hazszam>8</Hazszam>
+  </Cim>
+  <Nev>Kiss Árpád</Nev>
+  <Telefonszam>0670-5643905</Telefonszam>
+  <Telefonszam>0630-6734524</Telefonszam>
+</Dolgozo>
+
+<DolgozoD_id="33">
+  <Cim>
+    <Utca>Kossuth Lajos</Utca>
+    <Varos>Miskolc</Varos>
+    <Hazszam>56</Hazszam>
+  </Cim>
+  <Nev>Szabó Gergő</Nev>
+  <Telefonszam>0670-5723490</Telefonszam>
+  <Telefonszam>0630-9654321</Telefonszam>
+</Dolgozo>
+
+</GQOKMW_BEADANDO>
