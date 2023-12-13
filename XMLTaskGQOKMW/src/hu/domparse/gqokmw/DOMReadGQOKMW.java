@@ -98,14 +98,14 @@ public class DOMReadGQOKMW {
 
             for (int i = 0; i < attributeMap.getLength(); i++) {
                 Node attribute = attributeMap.item(i);
-                attributes.add(attribute.getNodeName() + "=\"" + attribute.getNodeValue() + "\"");
+                attributes.add(" " + attribute.getNodeName() + "=\"" + attribute.getNodeValue() + "\"");
             }
 
             System.out.print(getIndentString(indent));
-            System.out.print("<" + nodeName + "" + attributes.toString() + ">");
+            System.out.print("<" + nodeName + " " + attributes.toString() + ">");
 
             writer.print(getIndentString(indent));
-            writer.print("<" + nodeName + "" + attributes.toString() + ">");
+            writer.print("<" + nodeName + " " + attributes.toString() + ">");
 
             NodeList children = element.getChildNodes();
             if (children.getLength() == 1 && children.item(0).getNodeType() == Node.TEXT_NODE) {

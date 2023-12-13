@@ -75,7 +75,7 @@ public class DOMWriteGQOKMW {
             transformer.setOutputProperty("{https://xml.apache.org/xslt}indent-amount", "2");
 
             DOMSource source = new DOMSource(doc);
-            File myFile = new File("DomWriteOutPut_GQOKMW.xml");
+            File myFile = new File("DomWriteOutPut_GQOKMW1.xml");
             StreamResult file = new StreamResult(myFile);
             StreamResult consoleResult = new StreamResult(System.out);
             transformer.transform(source, file);
